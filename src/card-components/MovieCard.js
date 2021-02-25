@@ -34,12 +34,12 @@ export default class MovieCard extends Component {
     return (
       <div className="movie-card">
         // grabbed from title key from props object 
-         <h2>{this.props.title}</h2>
+        <h2>{this.props.title}</h2>
         <h3>{this.props.IMDBRating}</h3>
         <small>{this.props.genres}</small>
         <img src={this.props.poster} /> 
         <CardFront />
-        <CardBack />
+        <CardBack genres={this.props.genres}/>
       </div>
     )
   }
